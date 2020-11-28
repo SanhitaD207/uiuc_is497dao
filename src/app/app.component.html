@@ -1,1 +1,7 @@
-<app-test></app-test>
+<mat-toolbar>NYC Complaints Analysis</mat-toolbar>
+<nav mat-tab-nav-bar [backgroundColor]="'primary'">
+    <a mat-tab-link *ngFor="let link of links"
+    routerLink="/{{link.url}}"
+    [active]="router.url.includes(link.url)"> {{link.name}} </a>
+</nav>
+<router-outlet></router-outlet>
